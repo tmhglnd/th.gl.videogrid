@@ -18,6 +18,8 @@ outlets = 1;
 // the rendering context for the cornerpin
 var MAIN_CTX = (jsarguments.length>1)? jsarguments[1] : "no-ctx";
 
+var listen = new JitterListener();
+
 // the jit.gl.cornerpin for displaying the video
 // var cp = new JitterObject("jit.gl.cornerpin", MAIN_CTX);
 // cp.mouse_enable = 0;
@@ -75,6 +77,8 @@ function layer(v){
 }//jit_gl_texture()*/
 
 function div(x, y){
+	// set the amount of segments in the screen
+	if (y === void(0)) { y = x; }
 	div_x = Math.max(1, x);
 	div_y = Math.max(1, y);
 	screencount = div_x * div_y;
@@ -95,8 +99,10 @@ function index(v){
 
 function position(x, y){
 	// set the screen position in coordinates
-	screen_x = Math.max(0, Math.min(div_x-1, x));
-	screen_y = Math.max(0, Math.min(div_y-1, y));
+	// screen_x = Math.max(0, Math.min(div_x-1, x));
+	// screen_y = Math.max(0, Math.min(div_y-1, y));
+	screen_x = x;
+	screen_y = y;
 	calc_corners();
 
 	println("position()", screen_x, screen_y);
@@ -124,10 +130,13 @@ function calc_corners(){
 	var x_ratio = 1.0 / div_x;
 	var y_ratio = 1.0 / div_y;
 
-	var left = screen_x * x_ratio + (space * aspect_r);
-	var right = (screen_x + width_x) * x_ratio - (space * aspect_r);
-	var top = screen_y * y_ratio + space;
-	var bottom = (screen_y + width_y) * y_ratio - space;
+	var x = Math.max(0, Math.min(div_x-1, screen_x));
+	var y = Math.max(0, Math.min(div_y-1, screen_y));
+
+	var left = x * x_ratio + (space * aspect_r);
+	var right = (x + width_x) * x_ratio - (space * aspect_r);
+	var top = y * y_ratio + space;
+	var bottom = (y + width_y) * y_ratio - space;
 
 	// cp.lower_left = [left, bottom];
 	// cp.upper_left = [left, top];
