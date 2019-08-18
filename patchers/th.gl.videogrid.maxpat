@@ -308,8 +308,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 155.0, 225.0, 72.0, 22.0 ],
-					"text" : "patcherargs"
+					"patching_rect" : [ 139.0, 225.0, 135.0, 22.0 ],
+					"text" : "patcherargs @width 1 1"
 				}
 
 			}
@@ -321,7 +321,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_gl_texture" ],
 					"patching_rect" : [ 30.0, 225.0, 30.0, 30.0 ]
 				}
 
