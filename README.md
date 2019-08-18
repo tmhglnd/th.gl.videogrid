@@ -13,7 +13,7 @@ Display a video/texture in the jit.world on a fixed grid.
 The th.gl.videogrid allows you to display a texture on a certain position in the screen. The entire screen is divided in a grid based on the x and y division values. The width of the video determines how many segments of the grid the video uses. The index determines the position of the video left>right top>bottom.  The position can also be set with x,y coordinates.
 
 ## Overview
-![Overview of the helpfile and reference](media/screencap.png)
+![Overview of the helpfile and reference](media/overview.png)
 
 ## Install
 
