@@ -136,6 +136,14 @@
 				Preserve aspect ratio flag of input image (default = 0).
 			</description>
 		</attribute>
+		<attribute name="disable" get='0' set='1' type='int' size='2' >
+			<digest>
+				Disable the videoplane (default = 0).
+			</digest>
+			<description>
+				Disable the videoplane (default = 0).
+			</description>
+		</attribute>
 	</attributelist>
 
 

@@ -147,7 +147,7 @@ function calc_corners(){
 	outlet(0, "upper_left", left, top);
 	outlet(0, "lower_right", right, bottom);
 	outlet(0, "upper_right", right, top);
-	outlet(0, "enable", 1);
+	// outlet(0, "enable", 1);
 
 	println("calc_corners()", left, right, top, bottom);
 }//calc_corners()
