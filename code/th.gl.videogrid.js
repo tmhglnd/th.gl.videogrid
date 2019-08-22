@@ -50,7 +50,7 @@ var aspect_r = 1;
 // println(cp.mouse_enable, cp.cornermode, cp.preserve_aspect, cp.drawcorners, cp.drawto);
 
 function loadbang(){
-	post("th.gl.videogrid initialized | www.timohoogland.com", "\n");
+	// post("th.gl.videogrid initialized | www.timohoogland.com", "\n");
 }//loadbang()
 
 function dim(x, y){
